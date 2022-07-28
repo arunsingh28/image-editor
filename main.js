@@ -1,3 +1,5 @@
+// author @arunsingh28
+
 window.addEventListener('DOMContentLoaded', () => {
     //    init main code after properly load the content
     initApp()
@@ -7,9 +9,9 @@ window.addEventListener('DOMContentLoaded', () => {
 const initApp = () => {
     // render Image to DOM
     renderImage()
-
+    // render controller to DOM     
     editController()
-
+    // call editmode     
     editMode()
 }
 
@@ -113,6 +115,7 @@ const editMode = () => {
 
     btn.addEventListener('click', () => {
         let filter = 'grayscale(x)'.replace('x', 1)
+        // button toggler         
         if (img.style.filter !== filter) {
             img.style.filter = filter
             btn.innerHTML = 'Make Colorefull'
@@ -122,7 +125,4 @@ const editMode = () => {
             btn.innerHTML = 'Make Blackwhite'
         }
     })
-
-
-
 }

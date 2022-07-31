@@ -1,21 +1,21 @@
-class Animal{
-    constructor(name){
+class Animal {
+    constructor(name) {
         this.name = name
     }
-    speak(){
+    speak() {
         console.log(`${this.name} make a noise.`);
     }
 }
 
 // extend the animal class
-class Dog extends Animal{
-    constructor(name){
+class Dog extends Animal {
+    constructor(name) {
+        // inherit some properties from Animal class
         super(name)
     }
-    speak(){
+    speak() {
         console.log(`${this.name} barks.`)
     }
 }
 
-const d = new Dog('labra')
-console.log(d.speak())
+const d = new Dog('labra').speak()

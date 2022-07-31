@@ -1,28 +1,21 @@
-class Person {
-    constructor(name, lastName) {
+class Animal{
+    constructor(name){
         this.name = name
-        this.lastName = lastName
     }
-    
-}
-
-class Addition {
-    constructor(no1, no2) {
-        this.no1 = no1;
-        this.no2 = no2
-    }
-    // gutter
-    get Add() {
-        return this.no1 + this.no2
+    speak(){
+        console.log(`${this.name} make a noise.`);
     }
 }
 
-const Arun = new Person('Arun', 'Singh')
+// extend the animal class
+class Dog extends Animal{
+    constructor(name){
+        super(name)
+    }
+    speak(){
+        console.log(`${this.name} barks.`)
+    }
+}
 
-
-const sum1 = new Addition(10, 32)
-
-
-console.log(Arun.lastName)
-
-console.log('sum is :', sum1.Add)
+const d = new Dog('labra')
+console.log(d.speak())
